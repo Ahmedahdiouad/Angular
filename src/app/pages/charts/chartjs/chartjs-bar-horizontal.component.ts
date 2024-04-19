@@ -19,16 +19,21 @@ export class ChartjsBarHorizontalComponent implements OnDestroy {
       const chartjs: any = config.variables.chartjs;
 
       this.data = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        labels:  ['8:00', '9:00', '10:00', '11:00', '12:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00'],
         datasets: [{
-            label: 'Dataset 1',
+            label: 'Quality',
             backgroundColor: colors.infoLight,
             borderWidth: 1,
-            data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
+            data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random(),this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
           }, {
-            label: 'Dataset 2',
+            label: 'Performance',
             backgroundColor: colors.successLight,
-            data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
+            data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
+          },
+          {
+            label: 'Availability',
+            backgroundColor: colors.while ,
+            data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
           },
         ],
       };

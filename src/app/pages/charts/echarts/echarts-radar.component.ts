@@ -25,7 +25,7 @@ export class EchartsRadarComponent implements AfterViewInit, OnDestroy {
         color: [colors.danger, colors.warning],
         tooltip: {},
         legend: {
-          data: ['Allocated Budget', 'Actual Spending'],
+          data: ['Machine1', 'Machine2'],
           textStyle: {
             color: echarts.textColor,
           },
@@ -57,11 +57,11 @@ export class EchartsRadarComponent implements AfterViewInit, OnDestroy {
             data: [
               {
                 value: [4300, 10000, 28000, 35000, 50000, 19000],
-                name: 'Allocated Budget',
+                name: 'Machine1',
               },
               {
                 value: [5000, 14000, 28000, 31000, 42000, 21000],
-                name: 'Actual Spending',
+                name: 'Machine2',
               },
             ],
           },

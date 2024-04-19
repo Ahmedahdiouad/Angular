@@ -21,7 +21,7 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
       this.data = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
-          label: 'dataset - big points',
+          label: 'Quality',
           data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
           borderColor: colors.primary,
           backgroundColor: colors.primary,
@@ -30,7 +30,7 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
           pointRadius: 8,
           pointHoverRadius: 10,
         }, {
-          label: 'dataset - individual point sizes',
+          label: 'Performance',
           data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
           borderColor: colors.dangerLight,
           backgroundColor: colors.dangerLight,
@@ -39,22 +39,14 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
           pointRadius: 8,
           pointHoverRadius: 10,
         }, {
-          label: 'dataset - large pointHoverRadius',
+          label: 'Availability',
           data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
           borderColor: colors.info,
           backgroundColor: colors.info,
           fill: false,
           pointRadius: 8,
           pointHoverRadius: 10,
-        }, {
-          label: 'dataset - large pointHitRadius',
-          data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
-          borderColor: colors.success,
-          backgroundColor: colors.success,
-          fill: false,
-          pointRadius: 8,
-          pointHoverRadius: 10,
-        }],
+        }, ],
       };
 
       this.options = {

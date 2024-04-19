@@ -19,15 +19,16 @@ export class EchartsBarAnimationComponent implements AfterViewInit, OnDestroy {
       const xAxisData = [];
       const data1 = [];
       const data2 = [];
+      const data3 = [];
 
       const colors: any = config.variables;
       const echarts: any = config.variables.echarts;
 
       this.options = {
         backgroundColor: echarts.bg,
-        color: [colors.primaryLight, colors.infoLight],
+        color: [colors.danger, colors.infoLight],
         legend: {
-          data: ['bar', 'bar2'],
+          data: ['Machine1', 'Machine2',"Machine3"],
           align: 'left',
           textStyle: {
             color: echarts.textColor,
@@ -47,7 +48,7 @@ export class EchartsBarAnimationComponent implements AfterViewInit, OnDestroy {
             },
             axisLabel: {
               textStyle: {
-                color: echarts.textColor,
+                color: echarts.danger,
               },
             },
           },
@@ -56,7 +57,7 @@ export class EchartsBarAnimationComponent implements AfterViewInit, OnDestroy {
           {
             axisLine: {
               lineStyle: {
-                color: echarts.axisLineColor,
+                color: echarts.while 
               },
             },
             splitLine: {
@@ -66,23 +67,29 @@ export class EchartsBarAnimationComponent implements AfterViewInit, OnDestroy {
             },
             axisLabel: {
               textStyle: {
-                color: echarts.textColor,
+                color: echarts.danger,
               },
             },
           },
         ],
         series: [
           {
-            name: 'bar',
+            name: 'Machine1',
             type: 'bar',
             data: data1,
             animationDelay: idx => idx * 10,
           },
           {
-            name: 'bar2',
+            name: 'Machine2',
             type: 'bar',
             data: data2,
             animationDelay: idx => idx * 10 + 100,
+          },
+          {
+            name: 'Machine3',
+            type: 'bar',
+            data: data3,
+            animationDelay: idx => idx * 10 + 300,
           },
         ],
         animationEasing: 'elasticOut',
@@ -93,6 +100,7 @@ export class EchartsBarAnimationComponent implements AfterViewInit, OnDestroy {
         xAxisData.push('Category ' + i);
         data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
         data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
+        data3.push((Math.cos(i / 8) * (i / 5 - 10) + i / 6) * 5);
       }
     });
   }

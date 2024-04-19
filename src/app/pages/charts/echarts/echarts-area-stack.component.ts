@@ -33,7 +33,7 @@ export class EchartsAreaStackComponent implements AfterViewInit, OnDestroy {
           },
         },
         legend: {
-          data: ['Mail marketing', 'Affiliate advertising', 'Video ad', 'Direct interview', 'Search engine'],
+          data: ['Temperature', 'Humidity', 'Flow_rate', 'Air_pressure', 'Paint_level'],
           textStyle: {
             color: echarts.textColor,
           },
@@ -48,7 +48,7 @@ export class EchartsAreaStackComponent implements AfterViewInit, OnDestroy {
           {
             type: 'category',
             boundaryGap: false,
-            data: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+            data: ['8:00', '9:00', '10:00', '11:00', '12:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00'],
             axisTick: {
               alignWithLabel: true,
             },
@@ -85,36 +85,37 @@ export class EchartsAreaStackComponent implements AfterViewInit, OnDestroy {
           },
         ],
         series: [
+          
           {
-            name: 'Mail marketing',
+            name: 'Temperature',
             type: 'line',
             stack: 'Total amount',
             areaStyle: { normal: { opacity: echarts.areaOpacity } },
-            data: [120, 132, 101, 134, 90, 230, 210],
+            data: [120, 132, 101, 134, 90, 230, 210,182, 191, 234, 290, 330],
           },
           {
-            name: 'Affiliate advertising',
+            name: 'Humidity',
             type: 'line',
             stack: 'Total amount',
             areaStyle: { normal: { opacity: echarts.areaOpacity } },
-            data: [220, 182, 191, 234, 290, 330, 310],
+            data: [220, 182, 191, 234, 290, 330, 310, 101, 134, 90, 230, 210],
           },
           {
-            name: 'Video ad',
+            name: 'Flow_rate',
             type: 'line',
             stack: 'Total amount',
             areaStyle: { normal: { opacity: echarts.areaOpacity } },
-            data: [150, 232, 201, 154, 190, 330, 410],
+            data: [150, 232, 201, 154, 190, 330, 410,191, 234, 290, 330, 31],
           },
           {
-            name: 'Direct interview',
+            name: 'Air_pressure',
             type: 'line',
             stack: 'Total amount',
             areaStyle: { normal: { opacity: echarts.areaOpacity } },
-            data: [320, 332, 301, 334, 390, 330, 320],
+            data: [320, 332, 301, 334, 390, 330, 320,191, 24, 290, 30, 31],
           },
           {
-            name: 'Search engine',
+            name: 'Paint_level',
             type: 'line',
             stack: 'Total amount',
             label: {
@@ -127,7 +128,7 @@ export class EchartsAreaStackComponent implements AfterViewInit, OnDestroy {
               },
             },
             areaStyle: { normal: { opacity: echarts.areaOpacity } },
-            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            data: [820, 932, 901, 934, 1290, 1330, 1320,191, 234, 290, 330, 31],
           },
         ],
       };

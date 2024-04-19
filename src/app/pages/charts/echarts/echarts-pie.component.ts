@@ -30,7 +30,7 @@ export class EchartsPieComponent implements AfterViewInit, OnDestroy {
         legend: {
           orient: 'vertical',
           left: 'left',
-          data: ['USA', 'Germany', 'France', 'Canada', 'Russia'],
+          data: ['Temperature', 'Humidity', 'Flow_rate', 'Air_pressure', 'Paint_level'],
           textStyle: {
             color: echarts.textColor,
           },
@@ -42,11 +42,11 @@ export class EchartsPieComponent implements AfterViewInit, OnDestroy {
             radius: '80%',
             center: ['50%', '50%'],
             data: [
-              { value: 335, name: 'Germany' },
-              { value: 310, name: 'France' },
-              { value: 234, name: 'Canada' },
-              { value: 135, name: 'Russia' },
-              { value: 1548, name: 'USA' },
+              { value: 335, name: 'Humidity' },
+              { value: 310, name: 'Flow_rate' },
+              { value: 234, name: 'Air_pressure' },
+              { value: 135, name: 'Paint_level' },
+              { value: 1548, name: 'Temperature' },
             ],
             itemStyle: {
               emphasis: {

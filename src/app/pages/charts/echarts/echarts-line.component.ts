@@ -29,7 +29,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         },
         legend: {
           left: 'left',
-          data: ['Line 1', 'Line 2', 'Line 3'],
+          data: ['Machine1', 'Machine2', 'Machine3'],
           textStyle: {
             color: echarts.textColor,
           },
@@ -37,7 +37,7 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         xAxis: [
           {
             type: 'category',
-            data: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             axisTick: {
               alignWithLabel: true,
             },
@@ -81,17 +81,17 @@ export class EchartsLineComponent implements AfterViewInit, OnDestroy {
         },
         series: [
           {
-            name: 'Line 1',
+            name: 'Machine1',
             type: 'line',
             data: [1, 3, 9, 27, 81, 247, 741, 2223, 6669],
           },
           {
-            name: 'Line 2',
+            name: 'Machine2',
             type: 'line',
             data: [1, 2, 4, 8, 16, 32, 64, 128, 256],
           },
           {
-            name: 'Line 3',
+            name: 'Machine3',
             type: 'line',
             data: [1 / 2, 1 / 4, 1 / 8, 1 / 16, 1 / 32, 1 / 64, 1 / 128, 1 / 256, 1 / 512],
           },

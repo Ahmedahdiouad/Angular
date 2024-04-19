@@ -22,12 +22,17 @@ export class ChartjsRadarComponent implements OnDestroy {
         labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
         datasets: [{
           data: [65, 59, 90, 81, 56, 55, 40],
-          label: 'Series A',
+          label: 'Availability',
           borderColor: colors.danger,
           backgroundColor: NbColorHelper.hexToRgbA(colors.dangerLight, 0.5),
         }, {
-          data: [28, 48, 40, 19, 96, 27, 100],
-          label: 'Series B',
+          data: [28, 4, 40, 9, 96, 7, 10],
+          label: 'Performance',
+          borderColor: colors.while ,
+          backgroundColor: NbColorHelper.hexToRgbA(colors.warning, 0.5),
+        },{
+          data: [8, 48, 4, 19, 9, 27, 100],
+          label: 'Quality',
           borderColor: colors.warning,
           backgroundColor: NbColorHelper.hexToRgbA(colors.warningLight, 0.5),
         }],
